@@ -109,5 +109,8 @@ $ python3 user_test.py
 ### Sources: 
 * Used https://github.com/pranabdas/Access-OneDrive-via-Microsoft-Graph-Python for a lot of the methods and with modifying the authentication process. 
 
+### Powerpoint
+* In the github there is a powerpoint that was used to present our project to the class and the Professor in which we recieved overall positive feedback. 
+
 **Thanks for looking at my web application, Enjoy!** 
 
