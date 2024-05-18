@@ -97,5 +97,5 @@ $ pytest test_myfile.py
 $ cd flasknotesapp
 $ python3 user_test.py 
 ```
-**Enjoy!** 
+**Thanks for looking at my web application, Enjoy!** 
 

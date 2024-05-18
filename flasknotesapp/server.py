@@ -29,8 +29,7 @@ from objects.onedrive import GRAPH_API_ENDPOINT
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "secretkey"
 app.config["UPLOAD_FOLDER"] = "static\\files"
-app.secret_key = """967b75c111e64965848a7786bda9602
-        f9d208f991036ccc4f793a4199a9f74b4"""
+app.secret_key = """Generate Secret Key"""
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -420,7 +419,7 @@ def onedrive():
     None
     Sources: Adapted from https://github.com/pranabdas/Access-OneDrive-via-Microsoft-Graph-Python
     """
-    client_id = "1cda01e6-d1c5-4cc9-a03d-cfdef32fd32d"
+    client_id = "Create Your Own Client ID"
     permissions = ["Files.ReadWrite"]
     url = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
     response_type = 'token'
