@@ -1,7 +1,7 @@
 # Notes Web Flask Application: 
 
 ### Purpose: 
-* Project was created in CSC-450 Software Engineering at UNCW, taught by Dr. Layman
+* Project was created in Dr.Layman's Spring 2024 CSC-450 Software Engineering class at UNCW
 * Semester long group project that aimed to teach us how to work as a software engineering team and better our  understanding of software and git principles. 
 * Group members: 
 	*  Leo Doak (me) - Project Leader
