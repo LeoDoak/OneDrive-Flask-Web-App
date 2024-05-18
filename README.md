@@ -1,6 +1,6 @@
 # Notes Web Flask Application: 
 
-Purpose: 
+### Purpose: 
 * Project was created in CSC-450 Software Engineering at UNCW, taught by Dr. Layman
 * Semester long group project that aimed to teach us how to work as a software engineering team and better our  understanding of software and git principles. 
 * Group members: 
@@ -97,4 +97,5 @@ $ pytest test_myfile.py
 $ cd flasknotesapp
 $ python3 user_test.py 
 ```
+**Enjoy!** 
 
