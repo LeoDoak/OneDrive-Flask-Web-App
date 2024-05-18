@@ -1,7 +1,7 @@
 # Notes Web Flask Application: 
 
 ### Purpose: 
-* Project was created in Dr.Layman's Spring 2024 CSC-450 Software Engineering class at UNCW
+* Project was created in _**Dr.Layman's Spring 2024 CSC-450 Software Engineering class at UNCW**_
 * Semester long group project that aimed to teach us how to work as a software engineering team and better our  understanding of software and git principles. 
 * Group members: 
 	*  Leo Doak (me) - Project Leader
@@ -58,6 +58,14 @@
 	$ cd flasknotesapp
 	$ python3 server.py 
 	```
+6. Will need to also register the application with Microsoft Graph in order to utilize OneDrive
+	1. go here, https://portal.azure.com/
+	2. Click on App Registration 
+	3. Click New registration 
+	4. Put down a name for the registration and select "Accounts in any identity provider or organizational directory (for authenticating users with user flows)" for the supported accoount types, enter in a rederict URI
+	5. Click Register
+	6. For API Permissions, go to the dropdown and select "Files.ReadWrite.All"
+	7. Copy the client ID and redirect URI from the azure portal into the onedrive method in the server file (line 412)
 
 ### Method 2: View on Server 
 
@@ -97,5 +105,9 @@ $ pytest test_myfile.py
 $ cd flasknotesapp
 $ python3 user_test.py 
 ```
+
+### Sources: 
+* Used https://github.com/pranabdas/Access-OneDrive-via-Microsoft-Graph-Python for a lot of the methods and with modifying the authentication process. 
+
 **Thanks for looking at my web application, Enjoy!** 
 
