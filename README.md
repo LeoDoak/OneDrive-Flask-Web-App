@@ -13,7 +13,7 @@
 
 ## Ways to view Project:
 1. Locally, running the flask project on machine
-2. Accessing the Flask Application via Server URL 
+2. Accessing the Flask Application via Server URL (pythonanywhere)
 
 ### Method 1: 
 1. Cloning/Downloading github folder to local machine 
