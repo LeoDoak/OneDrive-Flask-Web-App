@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Used this tutorial https://www.scaler.com/topics/login-page-in-html/ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for('static', filename='styles/loginpage.css')}} " rel="stylesheet" />
+    <title>Login page</title>
+</head>
+<body>
+    <h1><center>Welcome to Notes App</center></h1>
+    <form action="/form_login" method ="post">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>&emsp;Sign in</h3>
+            <p>&emsp;Sign in with your username and password</p>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <!-- Username -->
+            <label for="username">Your username</label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <br><br>
+
+            <!-- Password -->
+            <label for="password">Your password</label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <!-- sub container for the checkbox and forgot password link -->
+            <div class="subcontainer">
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <p class="forgotpsd"> <a href="{{url_for('forgot_password')}}">Forgot Password?</a></p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" value= "Login">Login</button>
+
+            <!-- Sign up link -->
+            <p class="register"> Not a member? <a href="{{url_for('register')}}">Register here!</a></p>
+            <!-- Error Message --> 
+            <p><center><u><font size="5">{{msg}}</font></u></center></p>
+
+        </div>
+    </form>
+</body>
+</html>

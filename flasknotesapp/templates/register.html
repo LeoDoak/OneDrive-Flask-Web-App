@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Used this tutorial https://www.scaler.com/topics/login-page-in-html/ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/registerpage.css')}} " rel="stylesheet" />
+    <title> Register</title>
+</head>
+<body>
+    <h1><center>Create your Notes App account! </center></h1>
+    <form action="/form_register" method ="post">
+        <!-- Headings for the form -->
+        <div class="headingsContainer">
+            <h3>&emsp;Create Account</h3>
+            <p>&emsp;Create Account with email, username, and password</p>
+            <ul>
+              <li> Passwords must be 9 character long and include a number and a special character</li>
+              <li> Username must be a minimum of 5 characters and have atleast 5 letters </li>
+            </ul>
+        </div>
+
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+
+            <!-- email -->
+            <label for="email">Valid E-mail <span class = 'error_msg'>{{email_error}}</span></label>
+            <input type="text" placeholder="Enter email" name="email" required>
+
+            <!-- Username -->
+            <label for="username">Your username <span class = 'error_msg'>{{username_error}}</span></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <!-- Password -->
+            <label for="password">Your password <span class = 'error_msg'>{{password_error}}</span></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <!-- Password -->
+            <label for="confirmpassword"> Confirm password <span class = 'error_msg'>{{confirm_password_error}}</span></label>
+            <input type="password" placeholder="Enter Password" name="confirmpassword" required>
+
+            <!-- Submit button -->
+            <button type="submit" value= "Register">Create Account</button>
+
+            <!-- Back to Login Page Link -->
+            <p class="login"><a href="{{url_for('set_up')}}">Back to login page</a></p>
+
+        </div>
+    </form>
+</body>
+</html>

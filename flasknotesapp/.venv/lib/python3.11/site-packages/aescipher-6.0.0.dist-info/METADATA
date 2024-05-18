@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: aescipher
+Version: 6.0.0
+Summary: Use AES to encrypt everything with ease!
+Home-page: https://github.com/foxe6/
+Author: f̣ộx̣ệ6
+Author-email: foxe6@protonmail.com
+License: AGPL-3.0
+Project-URL: Sourcecode, https://github.com/foxe6/aescipher
+Project-URL: Documentation, https://github.com/foxe6/aescipher/blob/master/test
+Project-URL: Example, https://github.com/foxe6/aescipher/blob/master/aescipher/example
+Project-URL: Issues, https://github.com/foxe6/aescipher/issues
+Project-URL: Funding, https://paypal.me/foxe6
+Project-URL: Say Thanks!, https://saythanks.io/to/foxe6
+Keywords: aes cipher cbc ctr gcm stream block encrypt decrypt nonce iv file wrapper reader writer
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodome (>=0.0.1)
+Requires-Dist: omnitools (>=0.0.1)
+
+# AES Cipher
+
+<badges>[![version](https://img.shields.io/pypi/v/aescipher.svg)](https://pypi.org/project/aescipher/)
+[![license](https://img.shields.io/pypi/l/aescipher.svg)](https://pypi.org/project/aescipher/)
+[![pyversions](https://img.shields.io/pypi/pyversions/aescipher.svg)](https://pypi.org/project/aescipher/)  
+[![powered](https://img.shields.io/badge/Say-Thanks-ddddff.svg)](https://saythanks.io/to/foxe6)
+[![donate](https://img.shields.io/badge/Donate-Paypal-0070ba.svg)](https://paypal.me/foxe6)
+[![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://paypal.me/foxe6)
+</badges>
+
+<i>Use AES to encrypt everything with ease!</i>
+
+# Hierarchy
+
+```
+aescipher
+|---- AESCipherCBC()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCBCnoHASH()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCBCwoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCBCnoHASHwoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCTR()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCTRnoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCTRnoHASH()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCTRnoHASHnoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherGCM()
+|   |---- encrypt_and_digest()
+|   '---- decrypt_and_verify()
+|---- AESCipherGCMnoHASH()
+|   |---- encrypt_and_digest()
+|   '---- decrypt_and_verify()
+|---- AESCipherGCMwoIV()
+|   |---- encrypt_and_digest()
+|   '---- decrypt_and_verify()
+|---- AESCipherGCMnoHASHwoIV()
+|   |---- encrypt_and_digest()
+|   '---- decrypt_and_verify()
+|---- AESCipherGCMSTREAM()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherGCMSTREAMnoHASH()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherGCMSTREAMwoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherGCMSTREAMnoHASHwoIV()
+|   |---- encrypt()
+|   '---- decrypt()
+|---- AESCipherCTRFileEncReader()
+|   |---- name
+|   |---- fp
+|   |---- fo
+|   |---- seek()
+|   |---- read()
+|   |---- write()
+|   |---- close()
+|   '---- tell()
+|---- AESCipherCTRFileEncWriter()
+|   |---- name
+|   |---- fp
+|   |---- fo
+|   |---- seek()
+|   |---- read()
+|   |---- write()
+|   |---- close()
+|   '---- tell()
+|---- AESCipherCTRFileDecReader()
+|   |---- name
+|   |---- fp
+|   |---- fo
+|   |---- seek()
+|   |---- read()
+|   |---- write()
+|   |---- close()
+|   '---- tell()
+'---- AESCipherCTRFileDecWriter()
+    |---- name
+    |---- fp
+    |---- fo
+    |---- seek()
+    |---- read()
+    |---- write()
+    |---- close()
+    '---- tell()
+```
+
+# Example
+
+## python
+See `test`.
+
+

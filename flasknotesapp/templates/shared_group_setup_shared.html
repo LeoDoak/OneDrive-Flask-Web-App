@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folders in One Drive</title>
+    <link href="{{ url_for('static', filename='styles/share_group.css')}} " rel="stylesheet" />
+</head>
+
+<h1>Enter in the User's e-mail address that you would like to share Group:{{title}} with: </h1>
+
+<p>Click on the Add User to add user.</p>
+<form action="{{ url_for('share_group_action_shared')}}" method="post">
+  <label for="emails"> Email Address </label>
+  <input type="text" id="email" name="email"><br><br>
+  <input type="hidden" name="file_id" value="{{file_id}}">
+  <input type="hidden" name="title" value="{{title}}">
+  <input type="submit" value="Add User">
+</form>
+
+<div class = 'main_button'>
+<form action="{{ url_for('get_main_folders')}}">
+      <button type="submit">Back to group file explorer</button>
+</form>
+</div>
+
+</body>
+</html>

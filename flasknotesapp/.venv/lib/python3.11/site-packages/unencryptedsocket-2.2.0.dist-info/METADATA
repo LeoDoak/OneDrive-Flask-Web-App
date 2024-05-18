@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: unencryptedsocket
+Version: 2.2.0
+Summary: Simple socket server-client for interprocess communications without security
+Home-page: http://code.foxe6.kozow.com/unencryptedsocket/
+Author: f̣ộx̣ệ6
+Author-email: foxe6@pm.me
+License: AGPL-3.0
+Project-URL: Sourcecode, http://code.foxe6.kozow.com/unencryptedsocket.zip
+Project-URL: Documentation, http://code.foxe6.kozow.com/unencryptedsocket/docs/
+Project-URL: Example, http://code.foxe6.kozow.com/unencryptedsocket/test/
+Project-URL: Funding, https://paypal.me/foxe6
+Project-URL: Say Thanks!, https://saythanks.io/to/foxe6
+Keywords: unencrypted rpc socket server client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: omnitools (>=0.0.1)
+
+# Unencrypted Socket
+
+<badges>[![pkg](https://img.shields.io/badge/pkg-unencryptedsocket-808080.svg)](http://code.foxe6.kozow.com/unencryptedsocket/)
+[![version](https://img.shields.io/pypi/v/unencryptedsocket.svg)](https://pypi.org/project/unencryptedsocket/)
+[![license](https://img.shields.io/pypi/l/unencryptedsocket.svg)](https://pypi.org/project/unencryptedsocket/)
+[![pyversions](https://img.shields.io/pypi/pyversions/unencryptedsocket.svg)](https://pypi.org/project/unencryptedsocket/)  
+[![powered](https://img.shields.io/badge/Say-Thanks-ddddff.svg)](https://saythanks.io/to/foxe6)
+[![donate](https://img.shields.io/badge/Donate-Paypal-0070ba.svg)](https://paypal.me/foxe6)
+[![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://www.jetbrains.com/pycharm/)
+</badges>
+
+<i>Simple socket server-client for interprocess communications without security</i>
+
+# Hierarchy
+
+![unencryptedsocket](http://code.foxe6.kozow.com/unencryptedsocket/unencryptedsocket.svg)
+
+# Example
+
+## python
+See `test`.
+

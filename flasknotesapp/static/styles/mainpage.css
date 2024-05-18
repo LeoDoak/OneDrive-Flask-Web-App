@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to left, #041113, #001115); 
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+    
+}
+
+.logout_button{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.logout_button a {
+    color: white; } 
+
+.logout_button a:hover {
+    color: #00c8ff;
+}
+
+/* center things */
+
+.parent {
+  /*background: gray;*/
+  position: absolute;
+  height: 750px;
+  width: 1500px;
+}
+
+.child {
+  /*background-color: orange;*/
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  height: 100px;
+  width: 1000px;
+  transform: translate(-50%,-50%);
+}
+
+.homepage {
+    text-align: center; }
+.homepage a{
+    font-size: 70px;
+}
+
+.navbar {
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* This will space out the child elements */
+    align-items: center left; /* This will align the items vertically */
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 0 1rem; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+    display: inline-block;    /* chatgpt */
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 27px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #00c8ff;
+}
+
+.search {
+    max-width: 330px; /* Set a max-width for larger screens */
+    width: 100%; /* Make it flexible */
+    margin: auto;
+    display: block;
+}
+
+.srch {
+    font-family: 'Times New Roman';
+    width: calc(100% - 100px);
+    height: 60px;
+    background: transparent;
+    border: 1px #00c8ff;
+    margin-top: 13px;
+    color: aliceblue;
+    border-right: none;
+    font-size: 25px;
+    float: left;
+    padding: 0.5em;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn {
+    width: 100px;
+    height: 60px;
+    background: #00c8ff;
+    border: 2px solid #00c8ff;
+    margin-top: 13px;
+    color: whitesmoke;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+/*
+@media (max-width: 800px) {
+    .file-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid columns */
+        /*gap: 10px; /* Adjust gap */
+        /*padding: 10px; /* Adjust padding */
+       /* margin: auto; /* Center the grid */
+    /*
+    }
+
+    .file-list li {
+        height: auto; /* Make height flexible */
+/*    }
+    
+    /* Search bar adjustments */
+   /*.search {
+        width: 100%; /* Full width */
+        /*margin-top: 20px; /* Add some margin above on smaller screens */
+ /*   }
+
+    .srch {
+        width: calc(100% - 120px); /* Adjust the input width */
+ /*   }
+    
+    .btn {
+        width: 120px; /* Adjust the button width if necessary */
+ /*   }
+}
+
+.srch:focus {
+    outline: none;
+}
+*/
+
+/* Additional styles for the sidebar */
+/*
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family:sans-serif; 
+    background: -webkit-linear-gradient(to right, #155799, #159957);  
+    background: linear-gradient(to left, #9da7a8, #00c8ff); 
+    color:whitesmoke;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.file-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    width: 100%; 
+    max-width: 960px; 
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto; 
+}
+
+.file-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.file-list li {
+    background: #FFF; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 150px; 
+    position: relative;
+}
+
+
+.file-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+.file-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.file-name {
+    flex-grow: 1; 
+}
+.star {
+    cursor: pointer;
+    font-size: 24px; 
+    color: #ddd; 
+    transition: color 0.3s; 
+}
+.star.active {
+    color: gold; 
+}
+
+#groupsListItems {
+    display: flex;
+    flex-wrap: wrap;
+}
+*/
+
+/* groupsListItems li { */
+    /*width: calc(100% - 20px);  Calculate the width of each group item after reducing 20px for padding */
+    /* margin: 5px 0; /* Adjust the top and bottom margins to decrease the gap */
+    /* padding: 10px; /* Add padding to the group item */
+    /* background-color: black; /* Set a background color for each group item */
+    /* border-radius: 2px; /* Add border radius for rounded corners */
+    /* display: flex; /* Enable flexbox for centering */
+    /* justify-content: center; /* Center the content horizontally */
+    /* align-items: left; /* Center the content vertically */
+/*} 
+
+/*
+.font-size-controls {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+
+body, .sidebar, .navbar a, .nav-link, .nav-button, .main, .search, .file-list, .file-entry, .btn, .srch {
+    font-size: 1rem; 
+}
+
+#upload-button, #favorites-button, #logout-button, #authenticate-button {
+    font-size: 1rem !important; 
+}
+
+.btn, .srch {
+    font-size: inherit;
+    padding: 0.5rem; 
+}
+
+
+/* Add these styles to your mainpage.css file */
+
+/*
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+*/
+
+
+

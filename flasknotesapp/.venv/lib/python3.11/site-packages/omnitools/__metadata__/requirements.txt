@@ -1,0 +1,10 @@
+chardet>=0.0.1
+python-dateutil>=0.0.1
+pillow>=0.0.1
+encryptedsocket>=0.0.1
+unencryptedsocket>=0.0.1
+easyrsa>=0.0.1
+pyftpdlib>=0.0.1
+pyopenssl>=0.0.1
+threadwrapper>=0.0.1
+munch>=0.0.1

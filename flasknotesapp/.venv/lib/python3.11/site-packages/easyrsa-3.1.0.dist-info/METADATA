@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: easyrsa
+Version: 3.1.0
+Summary: Encrypt symmetric keys with RSA. Create self-signed certificates.
+Home-page: https://github.com/foxe6/
+Author: f̣ộx̣ệ6
+Author-email: foxe6@protonmail.com
+License: AGPL-3.0
+Project-URL: Sourcecode, https://github.com/foxe6/easyrsa
+Project-URL: Documentation, https://github.com/foxe6/easyrsa/blob/master/test
+Project-URL: Example, https://github.com/foxe6/easyrsa/blob/master/easyrsa/example
+Project-URL: Issues, https://github.com/foxe6/easyrsa/issues
+Project-URL: Funding, https://paypal.me/foxe6
+Project-URL: Say Thanks!, https://saythanks.io/to/foxe6
+Keywords: easy rsa public private key sign verify trusted root certificate authority x509 pkcs1 oaep pss ssl
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Requires-Dist: pycryptodome (>=0.0.1)
+Requires-Dist: pyopenssl (>=0.0.1)
+Requires-Dist: omnitools (>=0.0.1)
+
+# Easy RSA
+
+<badges>[![version](https://img.shields.io/pypi/v/easyrsa.svg)](https://pypi.org/project/easyrsa/)
+[![license](https://img.shields.io/pypi/l/easyrsa.svg)](https://pypi.org/project/easyrsa/)
+[![pyversions](https://img.shields.io/pypi/pyversions/easyrsa.svg)](https://pypi.org/project/easyrsa/)  
+[![powered](https://img.shields.io/badge/Say-Thanks-ddddff.svg)](https://saythanks.io/to/foxe6)
+[![donate](https://img.shields.io/badge/Donate-Paypal-0070ba.svg)](https://paypal.me/foxe6)
+[![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://paypal.me/foxe6)
+</badges>
+
+<i>Encrypt symmetric keys with RSA. Create self-signed certificates.</i>
+
+# Hierarchy
+
+```
+easyrsa
+|---- EasyRSA()
+|   |---- gen_key_pair()
+|   |---- encrypt()
+|   |---- decrypt()
+|   |---- sign()
+|   |---- verify()
+|   '---- max_msg_size()
+|---- Certificate()
+|   |---- dump()
+|   |---- basicConstraints()
+|   |---- subjectAltName()
+|   |---- keyUsage()
+|   |---- extendedKeyUsage()
+|   |---- subjectKeyIdentifier()
+|   |---- authorityKeyIdentifier()
+|   |---- issuerAltName()
+|   |---- authorityInfoAccess()
+|   |---- crlDistributionPoints()
+|   |---- issuingDistributionPoint()
+|   |---- certificatePolicies()
+|   |---- policyConstraints()
+|   |---- inhibitAnyPolicy()
+|   |---- nameConstraints()
+|   |---- noCheck()
+|   '---- tlsfeature()
+|---- CertificateAuthority()
+|   |---- sign()
+|   |---- dump()
+|   |---- sign_certificate()
+|   |---- verify_certificate()
+|   |---- verify_certificate_from_raw()
+|   |---- basicConstraints()
+|   |---- subjectAltName()
+|   |---- keyUsage()
+|   |---- extendedKeyUsage()
+|   |---- subjectKeyIdentifier()
+|   |---- authorityKeyIdentifier()
+|   |---- issuerAltName()
+|   |---- authorityInfoAccess()
+|   |---- crlDistributionPoints()
+|   |---- issuingDistributionPoint()
+|   |---- certificatePolicies()
+|   |---- policyConstraints()
+|   |---- inhibitAnyPolicy()
+|   |---- nameConstraints()
+|   |---- noCheck()
+|   '---- tlsfeature()
+'---- EasyRSAv1()
+    |---- gen_key_pair()
+    |---- encrypt()
+    |---- decrypt()
+    |---- sign()
+    |---- verify()
+    '---- max_msg_size()
+```
+
+# Example
+
+## python
+See `test`.
+

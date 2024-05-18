@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Sharing Web Application</title>
+    <link href="{{ url_for('static', filename='styles/mainpage.css')}}" rel="stylesheet" />
+</head>
+<body>
+    <h1> Adding a file to Group: {{ group }}</h1>
+    <form action="{{ url_for('upload_page_action_shared') }}" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <input type="hidden" name="group" value="{{ group }}">
+        <input type="hidden" name="file_id" value="{{ file_id}}">
+        {{ form.file() }}
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

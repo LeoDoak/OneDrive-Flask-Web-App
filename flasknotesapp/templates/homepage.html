@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Sharing Web Application</title>
+    <link href="{{ url_for('static', filename='styles/mainpage.css')}}" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Sidebar -->
+<!--
+    <div class="sidebar">
+        <h2 style="color: white;">Notes App</h2>
+        <a href="#">Dashboard</a>
+        <a href="#" id="groupsToggle">Groups</a>
+        <a href="#" id="profileLink">Profile</a>
+        <div id="groupsList" style="display: none;">
+            <ul id="groupsListItems"></ul>
+        </div>
+        <p><a href="{{ url_for('group_page') }}">Create Groups</a></p>
+    </div>
+-->
+    
+    <!-- Main content -->
+
+
+    <div class="main">
+            <div class = "logout_button"><a href="{{ url_for('logoutpage_page') }}">Log Out</a></div>
+            <div class="font-size-controls">
+                <button onclick="changeFontSize(-2)" aria-label="Decrease font size">A-</button>
+                <button onclick="changeFontSize(2)" aria-label="Increase font size">A+</button>
+            </div>
+        <div class="navbar"> 
+              <div class="parent">
+                <div class="child">
+                    <div class="menu">
+                    <center>
+                        <ul>
+                         <li class = 'homepage'><a href="{{url_for('homepage')}}">Notes App</a></li>
+                        </ul>
+                    </center>
+                            <ul>
+                                <li class = 'Authenticate'><a href="{{ url_for('onedrive') }}">Authenticate</a></li>
+                                <li class = 'get_main_folders'><a href="{{ url_for('get_favorites') }}">Favorites</a></li>
+                                <li class = 'group_page'><a href="{{ url_for('group_page') }}">Create Groups</a></li>
+                                <li class = 'get_main_folders'><a href="{{ url_for('get_main_folders') }}">Group File Explorer</a></li>
+                            </ul>
+                        <center>
+                            <br>
+                        <div class="search">
+                            <form action= "/searchfiles" method="post">
+                                <input class="srch" type="search" placeholder="Search" name='Search'>
+                                <button class="btn">Search</button>
+                            </form>
+                        </div>
+                    </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--
+        <div class="file-list">
+            <ul>
+                <li class="file-entry">
+                    <span class="file-name">note1.pdf</span>
+                    <span class="star" onclick="toggleStar(this)" data-filename="note1.pdf">&#9733;</span>
+                </li>
+                <li class="file-entry">
+                    <span class="file-name">assignment2.docx</span>
+                    <span class="star" onclick="toggleStar(this)" data-filename="assignment2.docx">&#9733;</span>
+                </li>
+                <li class="file-entry">
+                    <span class="file-name">lecture3.pptx</span>
+                    <span class="star" onclick="toggleStar(this)" data-filename="lecture3.pptx">&#9733;</span>
+                </li>
+            </ul>
+        </div>
+    -->
+
+       <!-- <div id="editProfileModal" class="modal"> --> 
+            <!-- Modal content -->
+        <!--
+            <div class="modal-content">
+                <span class="close" onclick="toggleEditProfileModal()">&times;</span>
+                <h2>Preview Profile</h2>
+                <div class="profile-picture-container">
+                    <div class="profile-picture" id="profilePicture"> --> 
+                        <!-- This will be the user's profile picture -->
+                       <!-- <p class="initials">K</p>
+                    </div>
+                    <button class="edit-picture-btn" onclick="triggerFileUpload()">Edit Picture</button>
+                    <input type="file" id="pictureInput" hidden>
+                </div>
+                <form id="profileEditForm"> --> 
+                    <!-- Name -->
+                    <!-- <div class="input-container">
+                        <label for="nameInput">Name</label>
+                        <input type="text" id="nameInput" name="name">
+                    </div> --> 
+                    <!-- Username -->
+                    <!-- <div class="input-container">
+                        <label for="usernameInput">Username</label>
+                        <input type="text" id="usernameInput" name="username">
+                    </div>
+                    <div class="save-button-container">
+                        <button type="submit">Save</button>
+                    </div>
+                </form>
+                <p class="note">Changing your name and profile picture will also affect your Quora Profile.</p>
+            </div>
+        </div>       
+    </div> 
+    <script> 
+
+
+
+        document.getElementById('profileLink').addEventListener('click', toggleEditProfileModal);
+
+        function triggerFileUpload() {
+            document.getElementById('pictureInput').click();
+        }
+        
+        document.getElementById('pictureInput').addEventListener('change', function(event) {
+            if (event.target.files.length > 0) {
+                var src = URL.createObjectURL(event.target.files[0]);
+                var preview = document.getElementById('profilePicture');
+                preview.innerHTML = ''; // Clear the initials
+                preview.style.backgroundImage = 'url(' + src + ')';
+            }
+        });
+        
+
+        function toggleEditProfileModal() {
+            const modal = document.getElementById('editProfileModal');
+            modal.style.display = modal.style.display === 'none' ? 'block' : 'none';
+        }
+
+        document.getElementById("profileEditForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            fetch('/update_profile', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Profile updated successfully!');
+                toggleEditProfileModal(); // Close the modal
+                console.log(data);
+            })
+            .catch(error => console.error('Error:', error));
+        });
+        
+    </script> --> 
+<!--
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            document.querySelectorAll('.star').forEach(star => {
+                const filename = star.dataset.filename;
+                if (favorites.includes(filename)) {
+                    star.classList.add('active');
+                }
+            });
+        });
+        
+        function toggleStar(starElement) {
+            const filename = starElement.getAttribute('data-filename');
+            starElement.classList.toggle('active');
+            const isActive = starElement.classList.contains('active');
+        
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (isActive && !favorites.includes(filename)) {
+                favorites.push(filename);
+            } else {
+                favorites = favorites.filter(f => f !== filename);
+            }
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        }
+        
+        
+        function addToFavorites(filename) {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (!favorites.includes(filename)) {
+                favorites.push(filename);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            }
+        }
+        
+        function removeFromFavorites(filename) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const index = favorites.indexOf(filename);
+            if (index !== -1) {
+                favorites.splice(index, 1);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            }
+        }
+    </script>
+-->
+<!-- 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const groupsToggle = document.getElementById('groupsToggle');
+            const groupsList = document.getElementById('groupsList');
+            const groupsListItems = document.getElementById('groupsListItems');
+    
+            // Toggle display of groups list
+            groupsToggle.addEventListener('click', () => {
+                if (groupsList.style.display === 'none') {
+                    // Populate sidebar with group titles
+                    populateGroupsList();
+                    groupsList.style.display = 'block'; // Show the group list
+                } else {
+                    groupsList.style.display = 'none'; // Hide the group list
+                }
+            });
+    
+            // Retrieve groups from local storage and populate the sidebar
+            function populateGroupsList() {
+                groupsListItems.innerHTML = ''; // Clear the list before populating it
+                const groups = JSON.parse(localStorage.getItem('groups')) || [];
+                groups.forEach(group => {
+                    const groupItem = document.createElement('li');
+                    const groupLink = document.createElement('a');
+                    groupLink.href = `group_details.html?title=${encodeURIComponent(group.title)}`;
+                    groupLink.textContent = group.title;
+                    groupLink.addEventListener('click', (event) => {
+                        event.preventDefault(); // Prevent the default link behavior
+                        window.location.href = groupLink.href; // Redirect to the group details page
+                    });
+                    groupItem.appendChild(groupLink);
+                    groupsListItems.appendChild(groupItem);
+                });
+            }
+        });
+    </script>
+-->
+     
+
+    <script>
+        function changeFontSize(change) {
+            const root = document.documentElement;
+            const currentFontSize = parseFloat(getComputedStyle(root).fontSize);
+            root.style.fontSize = `${Math.max(currentFontSize + change, 10)}px`; // Prevent font size less than 10px
+            saveFontSize();
+        }
+    
+        function saveFontSize() {
+            const root = document.documentElement;
+            const fontSize = getComputedStyle(root).fontSize;
+            localStorage.setItem('preferredFontSize', fontSize);
+        }
+    
+        function loadPreferredFontSize() {
+            const preferredFontSize = localStorage.getItem('preferredFontSize');
+            if (preferredFontSize) {
+            document.documentElement.style.fontSize = preferredFontSize;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPreferredFontSize();
+      /*
+        // Load stars
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            document.querySelectorAll('.star').forEach(star => {
+                const filename = star.dataset.filename;
+                if (favorites.includes(filename)) {
+                    star.classList.add('active');
+                }
+             });
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            document.querySelectorAll('.star').forEach(star => {
+                const filename = star.dataset.filename;
+                if (favorites.includes(filename)) {
+                    star.classList.add('active');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

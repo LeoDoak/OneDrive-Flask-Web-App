@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask OneDrive Authentication</title>
+    <link href="{{ url_for('static', filename='styles/style.css')}} " rel="stylesheet" />
+</head>
+<body>
+    <h1>OneDrive Authentication</h1>
+    <p>Type this </p> 
+    <p> {{url}} </p> 
+    <p> into another browser tab. Login and click accept. Once an error appears on the screen, copy and paste the url into this textbox. </p>
+    <form action="{{ url_for('get_token') }}" method="post">
+        <input type="text" name="info_url" placeholder="Enter OneDrive URL" required>
+        <button type="submit">Authenticate</button>
+    </form>
+</body>
+</html>
+
+

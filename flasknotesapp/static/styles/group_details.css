@@ -1,0 +1,13 @@
+/* Style for the header */
+header {
+    background-color: blue;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the title */
+h1 {
+    color: red;
+    text-align: center;
+    font-size: 50px;
+}

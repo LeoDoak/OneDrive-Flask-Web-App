@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folders in One Drive</title>
+    <link href="{{ url_for('static', filename='styles/icon.css')}} " rel="stylesheet" />
+</head>
+<body>
+    <h3> Groups you own:<h3>
+        <ul>
+        {% for file in folders %}
+        <!-- code came from : https://www.w3schools.com/html/html_comments.asp -->
+        <div class="gallery">
+            <img src= {{file.fileicon}} alt="Cinque Terre" width="600" height="400">
+          </a>
+          <div class="desc">{{file.title}}</div>
+          <!-- Creating the drop down: from; https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_button-->
+            <div class="dropdown">
+              <button class="dropbtn">Options</button>
+              <div class="dropdown-content">
+              <form action="{{ url_for('get_my_personal_files')}}" method="post">
+                  <input type="hidden" name="file_id" value="{{ file.file_id}}">
+                  <button type="submit">Open</button>
+              </form>
+              <form action="{{ url_for('share_group_setup')}}" method="post">
+                  <input type="hidden" name="file_id" value="{{ file.file_id}}">
+                  <input type="hidden" name="title" value="{{ file.title}}">
+                  <button type="submit">Share</button>
+              </form>
+              <form action="{{url_for('upload_page_setup')}}" method="post">
+                  <input type="hidden" name="file_id" value="{{ file.file_id}}">
+                  <input type="hidden" name="title" value="{{ file.title}}">
+                  <button type="submit">Add files</button>
+              </form>
+            </div>
+        </div>
+    </div>
+        {% endfor %}  
+        </ul>
+</body>
+</html>
+

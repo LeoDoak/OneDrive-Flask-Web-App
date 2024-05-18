@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: omnitools
+Version: 0.0.268
+Summary: Miscellaneous functions written in short forms.
+Home-page: http://code.foxe6.kozow.com/omnitools/
+Author: f̣ộx̣ệ6
+Author-email: foxe6@pm.me
+License: AGPL-3.0
+Project-URL: Sourcecode, http://code.foxe6.kozow.com/omnitools.zip
+Project-URL: Documentation, http://code.foxe6.kozow.com/omnitools/docs/
+Project-URL: Example, http://code.foxe6.kozow.com/omnitools/test/
+Project-URL: Funding, https://paypal.me/foxe6
+Project-URL: Say Thanks!, https://saythanks.io/to/foxe6
+Keywords: omnitools python utilities shortcuts misc
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: chardet (>=0.0.1)
+Requires-Dist: python-dateutil (>=0.0.1)
+Requires-Dist: pillow (>=0.0.1)
+Requires-Dist: encryptedsocket (>=0.0.1)
+Requires-Dist: unencryptedsocket (>=0.0.1)
+Requires-Dist: easyrsa (>=0.0.1)
+Requires-Dist: pyftpdlib (>=0.0.1)
+Requires-Dist: pyopenssl (>=0.0.1)
+Requires-Dist: threadwrapper (>=0.0.1)
+Requires-Dist: munch (>=0.0.1)
+
+# Omnitools
+
+<badges>[![pkg](https://img.shields.io/badge/pkg-omnitools-808080.svg)](http://code.foxe6.kozow.com/omnitools/)
+[![version](https://img.shields.io/pypi/v/omnitools.svg)](https://pypi.org/project/omnitools/)
+[![license](https://img.shields.io/pypi/l/omnitools.svg)](https://pypi.org/project/omnitools/)
+[![pyversions](https://img.shields.io/pypi/pyversions/omnitools.svg)](https://pypi.org/project/omnitools/)  
+[![powered](https://img.shields.io/badge/Say-Thanks-ddddff.svg)](https://saythanks.io/to/foxe6)
+[![donate](https://img.shields.io/badge/Donate-afdian-0070ba.svg)](https://afdian.net/a/foxe6)
+[![made](https://img.shields.io/badge/Made%20with-PyCharm-red.svg)](https://www.jetbrains.com/pycharm/)
+</badges>
+
+<i>Miscellaneous functions written in short forms.</i>
+
+# Hierarchy
+![omnitools](http://code.foxe6.kozow.com/omnitools/omnitools.svg)
+
+# Example
+
+## python
+See `test`.
+

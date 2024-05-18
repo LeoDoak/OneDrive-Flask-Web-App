@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- ChatGPT helped ,with the second part on figuring out the rest that if the page is logout then enable no going back -->
+<script>
+        function preventBack() {
+            window.history.pushState(null, "", window.location.href);
+            window.onpopstate = function () {
+                window.history.pushState(null, "", window.location.href);
+            };
+        }
+
+        // Call the preventBack function only if the user is on the logout page
+        if (window.location.pathname === '/logout') {
+            preventBack();
+        }
+</script> 
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Sharing Web Application</title>
+    <link href="{{ url_for('static', filename='styles/style.css')}} " rel="stylesheet" />
+</head>
+<body>
+    <h1>Congrats! You are now logged out.</h1>
+    <p> <a href="{{ url_for('set_up') }}">Back to Login Page</a></p>
+</body>
+</html>
